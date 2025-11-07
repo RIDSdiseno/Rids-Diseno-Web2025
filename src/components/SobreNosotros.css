@@ -1,0 +1,87 @@
+.sobre-nosotros-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  background: url("../assets/fondo-rids.gif") center/cover no-repeat fixed;
+  position: relative;
+  z-index: 1;
+  min-height: 35vh; /* antes 55vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0; /* menos espacio vertical */
+}
+
+
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,95,106,0.7), rgba(32,109,153,0.7));
+  z-index: -1;
+}
+
+/* Título con efecto */
+.animate-title {
+  animation: titlePop 1.2s ease forwards;
+  letter-spacing: 1px;
+}
+
+/* Ajuste general */
+.compact-text {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* --- Animaciones --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s forwards;
+}
+
+.animated-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.animated-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 95, 106, 0.15);
+  border-left: 4px solid #206D99;
+}
+
+/* Flotante */
+.floating-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titlePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

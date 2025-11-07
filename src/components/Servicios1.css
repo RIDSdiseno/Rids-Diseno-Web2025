@@ -1,0 +1,128 @@
+/* 🌌 Fondo general */
+.s1-section {
+  background-color: #0b0b0b;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* 🖼️ Banner superior */
+.s1-banner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.s1-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.s1-banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.s1-banner-overlay h1 {
+  font-size: 2.8rem;
+  color: #5bc0de;
+  text-shadow: 0 0 15px rgba(0, 95, 106, 0.6);
+}
+
+.s1-banner-overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #d6d6d6;
+}
+
+/* 📦 Contenedor */
+.s1-inner {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* ✨ Títulos */
+.s1-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #5bc0de;
+  margin-bottom: 10px;
+}
+
+.s1-sub {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+/* 🧱 Grid */
+.s1-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* 🟩 Tarjetas */
+.s1-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 rgba(0, 95, 106, 0);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* 🎞️ Animación de entrada */
+.s1-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🧿 Hover animado con borde */
+.s1-card:hover {
+  border-color: #206d99;
+  box-shadow: 0 0 20px rgba(0, 95, 106, 0.5);
+  transform: translateY(-8px);
+}
+
+/* 🧩 Contenido */
+.s1-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.s1-card-title {
+  color: #5bc0de;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.s1-card-desc {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .s1-banner {
+    height: 35vh;
+  }
+
+  .s1-banner-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .s1-inner {
+    padding: 60px 6%;
+  }
+}

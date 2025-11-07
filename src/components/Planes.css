@@ -1,0 +1,165 @@
+.planes-section {
+  background: #0a0f1a;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Encabezado */
+.planes-hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(to bottom, #0a0f1a, #0e1729, #0a0f1a);
+}
+.planes-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+.planes-sub {
+  color: #d1d5db;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
+.planes-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.plan-card {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid #1f2937;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.plan-card--highlight {
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+.plan-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+.plan-offer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #38bdf8;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 1rem;
+  border-bottom-left-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.plan-name {
+  color: #38bdf8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+}
+.plan-subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+.plan-desc {
+  text-align: center;
+  color: #d1d5db;
+}
+.plan-prices {
+  text-align: center;
+  margin-top: 1rem;
+}
+.plan-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.plan-discount {
+  color: #38bdf8;
+  font-weight: 600;
+}
+.plan-list {
+  margin-top: 1.5rem;
+  color: #d1d5db;
+  list-style: none;
+  padding: 0;
+}
+.plan-list li {
+  margin-bottom: 0.5rem;
+}
+.plan-list span {
+  color: #38bdf8;
+}
+.plan-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: #38bdf8;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.plan-btn:hover {
+  background-color: #0ea5e9;
+}
+
+/* Tabla comparativa */
+.planes-table-container {
+  background: #0e1729;
+  padding: 5rem 1rem;
+}
+.planes-table-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #38bdf8;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+}
+.planes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0a0f1a;
+  min-width: 800px;
+}
+.planes-table th {
+  background: #111827;
+  color: #38bdf8;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: 600;
+}
+.planes-table td {
+  border-top: 1px solid #1e293b;
+  padding: 1rem;
+  text-align: center;
+  color: #d1d5db;
+}
+.planes-table tr:hover {
+  background: rgba(30, 41, 59, 0.5);
+  transition: background 0.3s ease;
+}
+.planes-table .col-titulo {
+  text-align: left;
+  color: #38bdf8;
+  font-weight: 600;
+}

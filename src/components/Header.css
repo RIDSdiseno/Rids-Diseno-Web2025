@@ -1,0 +1,79 @@
+/* 🧭 HEADER GENERAL */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(180deg, 	#005F6A 0%, #206d99 100%); 
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+/* 🔹 Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #faf4f4; /* 🖤 Texto negro */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: #ffffff; /* Se vuelve blanco al pasar el cursor */
+}
+
+/* 🔸 Navegación */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: #e4dcdc; /* 🖤 Letras negras */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.15rem; /* 🔠 Un poco más grande */
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff; /* ⚪ Se iluminan en blanco */
+  transform: translateY(-2px);
+}
+
+/* 🔽 Cuando el usuario hace scroll */
+.header.scrolled {
+  background: linear-gradient(180deg, 	#005F6A 0%, #206d99 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 900px) {
+  .header {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none; /* Más adelante puedes agregar un menú hamburguesa */
+  }
+}
