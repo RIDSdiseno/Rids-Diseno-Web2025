@@ -1,5 +1,5 @@
 import React from "react";
-import "./Plans.css"; // 👈 Importamos el CSS externo
+import "./Plans.css"; 
 
 const plans = [
   {

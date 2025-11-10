@@ -1,214 +1,127 @@
-/* 🌌 --- CONTENEDOR GENERAL (FONDO CELESTE) --- */
-.sobre-nosotros-container {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, #9fe7f0 0%, #2EB5D2 100%);
-  color: #0a2c35;
-  font-family: 'Poppins', sans-serif;
+/* 🌌 SECCIÓN PRINCIPAL */
+.sobrenos-section {
+  background: linear-gradient(180deg, #04161B 0%, #063445 50%, #0B5A72 100%);
+  background-image: url("../assets/fondo-rids.gif");
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #E8F3F6;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 5rem;
 }
 
-/* 🌈 --- HERO SECTION --- */
-.hero-section {
-  background: url("../assets/fondo-rids.gif") center/cover no-repeat fixed;
-  position: relative;
-  z-index: 1;
-  min-height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 🔹 ENCABEZADO */
+.sobrenos-hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 6rem 1rem 3rem;
+  background: linear-gradient(180deg, rgba(11,90,114,0.85) 0%, rgba(5,36,45,0.95) 100%);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
 }
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(46, 181, 210, 0.85), rgba(26, 60, 71, 0.85));
-  z-index: -1;
-}
-
-.hero-section h1 {
-  color: #ffffff;
-  text-shadow: 0 0 12px rgba(46, 181, 210, 0.9);
-}
-
-.hero-section p {
-  color: #e6f8fc;
-}
-
-/* ✨ --- BLOQUES DE TEXTO PRINCIPALES --- */
-.compact-text {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(46, 181, 210, 0.3);
-  border-left: 4px solid #1A3C47;
-  border-radius: 10px;
-  padding: 2rem;
-  color: #0a2c35;
-  box-shadow: 0 5px 15px rgba(26, 60, 71, 0.15);
-  transition: all 0.4s ease;
-}
-
-.compact-text:hover {
-  transform: translateY(-5px);
-  background: #ffffff;
-  color: #1A3C47;
-  box-shadow: 0 8px 25px rgba(26, 60, 71, 0.3);
-  border-left: 6px solid #2EB5D2;
-}
-
-/* 🧩 --- TARJETAS DE MISIÓN / VISIÓN --- */
-.animated-card {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  padding: 2rem;
-  border: 1px solid rgba(46, 181, 210, 0.25);
-  transition: all 0.4s ease;
-  color: #0a2c35;
-}
-
-.animated-card:hover {
-  transform: translateY(-6px);
-  background: #ffffff;
-  color: #1A3C47;
-  border-color: #2EB5D2;
-  box-shadow: 0 8px 25px rgba(46, 181, 210, 0.35);
-}
-
-.animated-card h2 {
-  color: #1A3C47;
+.sobrenos-title {
+  font-size: 3rem;
   font-weight: 700;
+  color: #eaecec;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 16px rgba(10, 125, 156, 0.5);
 }
 
-.animated-card:hover h2 {
-  color: #2EB5D2;
-}
-
-.animated-card p {
-  color: #1a3c47b0;
-}
-
-.animated-card:hover p {
-  color: #1A3C47;
-}
-
-/* 🌟 --- VALORES --- */
-.value-card {
-  background: rgba(255, 255, 255, 0.85);
-  color: #1A3C47;
-  border-radius: 12px;
-  padding: 1.5rem;
-  border: 1px solid rgba(46, 181, 210, 0.25);
-  transition: all 0.4s ease;
-  text-align: center;
-}
-
-.value-card:hover {
-  background: #ffffff;
-  color: #0a2c35;
-  border-color: #1A3C47;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(46, 181, 210, 0.25);
-}
-
-.value-icon {
-  width: 80px;
-  height: 80px;
-  background: rgba(46, 181, 210, 0.15);
-  color: #1A3C47;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin: 0 auto 1rem;
-  transition: all 0.3s ease;
-}
-
-.value-card:hover .value-icon {
-  background: rgba(7, 57, 86, 0.1);
-  color: #2EB5D2;
-}
-
-/* 🎬 --- BOTÓN CTA --- */
-#contacto button {
-  background: linear-gradient(90deg, #1A3C47, #2EB5D2);
-  color: white;
-  font-weight: 700;
-  padding: 0.9rem 2rem;
-  border-radius: 10px;
+.sobrenos-sub {
+  color: #C8DDE4;
+  max-width: 750px;
+  margin: 0 auto;
   font-size: 1.1rem;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 10px rgba(46, 181, 210, 0.3);
+  line-height: 1.6;
+}
+
+/* 🧩 FILAS */
+.sobrenos-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.sobrenos-row--top .sobrenos-card {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.sobrenos-row--bottom .sobrenos-card {
+  flex: 1 1 30%;
+  min-width: 260px;
+}
+
+/* 🔷 TARJETAS */
+.sobrenos-card {
+  background: rgba(10, 35, 45, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  backdrop-filter: blur(14px);
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 189, 242, 0.15);
+  text-align: center;
+  position: relative;
+}
+
+.sobrenos-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 189, 242, 0.4);
+}
+
+.sobrenos-card-title {
+  color: #f0f4f5;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 189, 242, 0.4);
+}
+
+/* 📞 BOTÓN DE CONTACTO */
+.sobrenos-cta {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.sobrenos-btn {
+  padding: 1rem 2.5rem;
   border: none;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #00BDF2, #008EC2);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 189, 242, 0.25);
 }
 
-#contacto button:hover {
-  background: linear-gradient(90deg, #2EB5D2, #1A3C47);
+.sobrenos-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(46, 181, 210, 0.4);
+  background: linear-gradient(135deg, #0095C7, #00BDF2);
+  box-shadow: 0 15px 35px rgba(0, 189, 242, 0.35);
 }
 
-/* 🌟 --- ANIMACIONES --- */
-.fade-in {
+/* 💫 ANIMACIONES SUAVES */
+.sobrenos-card {
+  animation: fadeInUp 0.7s ease forwards;
   opacity: 0;
-  transform: translateY(10px);
-  animation: fadeIn 0.8s forwards;
 }
+.sobrenos-card:nth-child(1) { animation-delay: 0.1s; }
+.sobrenos-card:nth-child(2) { animation-delay: 0.2s; }
+.sobrenos-card:nth-child(3) { animation-delay: 0.3s; }
+.sobrenos-card:nth-child(4) { animation-delay: 0.4s; }
+.sobrenos-card:nth-child(5) { animation-delay: 0.5s; }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.floating-animation {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* ✨ --- TITULO EFECTO --- */
-.animate-title {
-  animation: titlePop 1s ease forwards;
-}
-
-@keyframes titlePop {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* 📱 --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  .hero-section {
-    min-height: 35vh;
-    padding: 40px 20px;
-  }
-
-  .animated-card,
-  .value-card {
-    padding: 1.2rem;
-  }
-
-  .compact-text {
-    padding: 1.5rem;
-  }
-
-  #contacto button {
-    width: 100%;
-  }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }

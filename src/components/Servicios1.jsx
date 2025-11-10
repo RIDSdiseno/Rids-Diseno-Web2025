@@ -1,95 +1,100 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Slider from "react-slick"; // 🌀 Carrusel
 import "./Servicios1.css";
-import serviciosImg from "../assets/Servicios.gif"; 
+
+import img1 from "../assets/hero1.png";
+import img2 from "../assets/hero2.png";
+import img3 from "../assets/hero3.png";
+import img4 from "../assets/hero4.png";
+
 
 export default function Servicios1() {
-  const containerRef = useRef(null);
+  const [activeCard, setActiveCard] = useState(null);
 
-  // 🟦 Observer para animaciones de entrada
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    el.querySelectorAll(".s1-card").forEach((card) => observer.observe(card));
-    return () => observer.disconnect();
-  }, []);
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: false,
+  };
 
   const servicios = [
     {
       icon: "💻",
       titulo: "Desarrollo Web",
       descripcion:
-        "Creamos sitios modernos, rápidos y personalizados, con las últimas tecnologías y un diseño profesional.",
-    },
-    {
-      icon: "🛠️",
-      titulo: "Soporte y Mantenimiento",
-      descripcion:
-        "Brindamos soporte técnico continuo, mantenimiento preventivo y correctivo 24/7 para tu empresa.",
-    },
-    {
-      icon: "🌐",
-      titulo: "Redes e Infraestructura",
-      descripcion:
-        "Diseñamos e implementamos redes seguras, eficientes y adaptadas a tu entorno corporativo.",
+        "Creamos sitios web rápidos, modernos y escalables con las mejores tecnologías actuales.",
     },
     {
       icon: "🎨",
       titulo: "Diseño UX/UI",
       descripcion:
-        "Diseños centrados en el usuario, combinando estética e intuitividad para maximizar resultados.",
-    },
-    {
-      icon: "☁️",
-      titulo: "Servicios en la Nube",
-      descripcion:
-        "Migramos tus sistemas a la nube con soluciones seguras, flexibles y escalables.",
+        "Diseñamos interfaces atractivas, intuitivas y centradas en la experiencia del usuario.",
     },
     {
       icon: "🔒",
       titulo: "Ciberseguridad",
       descripcion:
-        "Protegemos tus activos digitales con auditorías, monitoreo y respuesta ante incidentes.",
+        "Protegemos tus sistemas frente a amenazas con soluciones de seguridad avanzadas.",
+    },
+    {
+      icon: "☁️",
+      titulo: "Servicios en la Nube",
+      descripcion:
+        "Migramos tus sistemas a la nube con alta disponibilidad y flexibilidad.",
+    },
+    {
+      icon: "🛠️",
+      titulo: "Soporte y Mantenimiento",
+      descripcion:
+        "Monitoreo, mantenimiento y asistencia técnica personalizada para tu empresa.",
     },
   ];
 
   return (
-    <section className="s1-section" id="servicios1" ref={containerRef}>
-      {/* 🖼️ Encabezado con imagen de fondo o GIF */}
-      <div className="s1-banner">
-        <img src={serviciosImg} alt="Banner Servicios" />
-        <div className="s1-banner-overlay">
-          <h1>Nuestros Servicios</h1>
-          <p>Innovación, tecnología y seguridad al servicio de tu empresa</p>
+    <section className="servicios-section" id="servicios">
+      {/* 🖼️ Carrusel */}
+      <div className="servicios-carousel">
+        <Slider {...settings}>
+          {[img1, img2, img3, img4].map((img, i) => (
+            <div key={i} className="servicios-slide">
+              <img src={img} alt={`Slide ${i}`} className="servicios-img" />
+            </div>
+          ))}
+        </Slider>
+
+        {/* 🌟 Texto fijo sobre el carrusel */}
+        <div className="servicios-overlay">
+          <h1 className="servicios-title">Nuestros Servicios</h1>
+          <p className="servicios-sub">
+            Innovación, tecnología y seguridad al servicio de tu empresa
+          </p>
         </div>
       </div>
 
-      {/* 🟦 Contenido principal */}
-      <div className="s1-inner max-w-6xl mx-auto px-6">
-        <h2 className="s1-title">Soluciones Integrales en Tecnología</h2>
-        <p className="s1-sub">
-          Impulsamos tu negocio con herramientas digitales diseñadas para crecer contigo.
+      {/* 🧩 Cards */}
+      <div className="servicios-container">
+        <h2 className="servicios-heading">Soluciones Tecnológicas</h2>
+        <p className="servicios-text">
+          Adaptamos nuestras soluciones a las necesidades reales de tu negocio.
         </p>
 
-        <div className="s1-grid">
+        <div className="servicios-grid">
           {servicios.map((s, i) => (
-            <article
-              className="s1-card"
+            <div
               key={i}
-              style={{ transitionDelay: `${i * 90}ms` }}
+              className={`servicios-card ${activeCard === i ? "active" : ""}`}
+              onClick={() => setActiveCard(activeCard === i ? null : i)}
             >
-              <div className="s1-icon">{s.icon}</div>
-              <h3 className="s1-card-title">{s.titulo}</h3>
-              <p className="s1-card-desc">{s.descripcion}</p>
-            </article>
+              <div className="servicios-icon">{s.icon}</div>
+              <h3 className="servicios-card-title">{s.titulo}</h3>
+              <p className="servicios-card-desc">{s.descripcion}</p>
+            </div>
           ))}
         </div>
       </div>
