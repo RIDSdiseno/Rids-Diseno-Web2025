@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick"; // 🌀 Carrusel
 import "./Servicios1.css";
+import React, { useState } from "react";
 
 import img1 from "../assets/hero1.png";
 import img2 from "../assets/hero2.png";

@@ -128,25 +128,7 @@ export default function Planes() {
 
   return (
     <section className="planes-section">
-      {/* 🟦 Nuevo apartado introductorio */}
-      <motion.div
-        className="planes-intro"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1 className="intro-title">
-          Planes de Soporte TI para Personas, Pymes y Empresas
-        </h1>
-        <p className="intro-text">
-          Suscripciones de soporte informático con foco en continuidad
-          operativa, seguridad y productividad. Incluye mantenimiento
-          preventivo/correctivo, gestión de licencias Microsoft/Google,
-          respaldo en la nube y visitas presenciales.
-        </p>
-      </motion.div>
-
-      {/* 🟨 Sección principal de planes */}
+      {/* 🟦 Encabezado limpio (sin el texto que se sobrepone al navbar) */}
       <div className="planes-hero">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
@@ -168,7 +150,7 @@ export default function Planes() {
         </motion.p>
       </div>
 
-      {/* Tarjetas */}
+      {/* 🟩 Tarjetas de planes */}
       <div className="planes-grid">
         {planes.map((plan, i) => (
           <motion.div
@@ -199,7 +181,7 @@ export default function Planes() {
         ))}
       </div>
 
-      {/* Tabla comparativa */}
+      {/* 🟦 Tabla comparativa */}
       <div className="planes-table-container">
         <h2 className="planes-table-title">Comparativa de Planes</h2>
         <div className="table-wrapper">
