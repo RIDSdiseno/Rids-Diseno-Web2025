@@ -1,4 +1,4 @@
-import footerLogo from "../assets/Footer.png"; // <-- ruta relativa desde este archivo
+import footerLogo from "../assets/LOGO_RIDS_blanco.png"; // <-- ruta relativa desde este archivo
 
 import {
   FaLinkedin,

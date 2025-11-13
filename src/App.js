@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ServicesCarousel from "./components/ServicesCarousel";
@@ -10,17 +10,33 @@ import Servicios1 from "./components/Servicios1";
 import Planes from "./components/Planes";
 import SobreNosotros from "./components/SobreNosotros";
 import WhatsAppButton from "./components/WhatsAppButton";
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// 🟦 Importa tu logo desde assets
+import logoRids from "./assets/logo-rids.png";
+
 function App() {
+  useEffect(() => {
+    // 🟨 Crear favicon dinámicamente
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.type = "image/png";
+    favicon.href = logoRids;
+
+    // Eliminar cualquier favicon anterior y agregar este
+    const existingFavicon = document.querySelector("link[rel='icon']");
+    if (existingFavicon) {
+      document.head.removeChild(existingFavicon);
+    }
+    document.head.appendChild(favicon);
+  }, []);
+
   return (
     <Router>
-      {/* Navbar / Encabezado principal */}
+      {/* 🧭 Navbar / Encabezado principal */}
       <Header />
 
-      {/* Rutas principales */}
+      {/* 🌍 Rutas principales */}
       <Routes>
         <Route
           path="/"
@@ -40,10 +56,11 @@ function App() {
         <Route path="/planes" element={<Planes />} />
       </Routes>
 
-      {/* ✅ Footer global visible en TODAS las páginas */}
+      {/* ✅ Footer global visible en todas las páginas */}
       <Footer />
-<WhatsAppButton />
 
+      {/* 💬 Botón de WhatsApp */}
+      <WhatsAppButton />
     </Router>
   );
 }

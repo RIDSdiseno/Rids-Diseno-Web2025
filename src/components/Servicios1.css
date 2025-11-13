@@ -4,7 +4,7 @@
 /* 🌌 Fondo general */
 .servicios-section {
   background: linear-gradient(180deg, #04161b 0%, #063445 60%, #0b5a72 100%);
-  color: #e8f3f6;
+  color: #0c1c21;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   position: relative;
@@ -103,33 +103,37 @@
   justify-items: center;
 }
 
+/* 🧊 Card blanca */
 .servicios-card {
-  background: rgba(10, 35, 45, 0.7);
+  background: #ffffff;
   border-radius: 1.3rem;
-  border: 1px solid rgba(0, 189, 242, 0.15);
-  box-shadow: 0 10px 25px rgba(0, 189, 242, 0.15);
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   padding: 2rem;
   width: 100%;
   max-width: 320px;
   transition: all 0.3s ease;
   cursor: pointer;
   text-align: center;
+  color: #0b2430;
 }
 
 .servicios-card:hover {
   transform: translateY(-8px);
-  border-color: #e3e8e9;
-  box-shadow: 0 0 25px rgba(0, 189, 242, 0.35);
+  box-shadow: 0 0 25px rgba(0, 189, 242, 0.25);
 }
 
-.servicios-icon {
-  font-size: 2.3rem;
-  margin-bottom: 0.8rem;
+/* 🖼️ Ícono o Imagen del servicio */
+.servicios-icon-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
+/* ✍️ Título del servicio */
 .servicios-card-title {
-  color: #dfebec;
+  color: #0b2e3d;
   font-weight: 600;
   font-size: 1.3rem;
   transition: color 0.3s;
@@ -137,7 +141,7 @@
 
 /* 🧾 Descripción desplegable */
 .servicios-card-desc {
-  color: #d6e3e8;
+  color: #3a4d55;
   font-size: 1rem;
   line-height: 1.5;
   margin-top: 0.8rem;
@@ -163,5 +167,8 @@
   }
   .servicios-img {
     height: 40vh;
+  }
+  .servicios-card {
+    max-width: 90%;
   }
 }
